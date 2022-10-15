@@ -40,14 +40,15 @@ include $(DEVKITPRO)/libnx/switch_rules
 APP_TITLE := Homebrew Menu
 APP_AUTHOR := Yellows8
 APP_VERSION := 1.0
-APP_TITLEID := 0104444444441001
+APP_TITLEID := 0104444444444001
 
 TARGET		:=	hbmenu
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
-EXEFS_SRC	:=	exefs_src
+
+HBL_VERSION	:=	2.4.1
 
 CONFIG_JSON := hbmenu.json
 
@@ -59,7 +60,7 @@ ARCH	:=	-march=armv8-a -mtune=cortex-a57 -mtp=soft -fPIE
 CFLAGS	:=	-g -Wall -O2 -ffunction-sections \
 			$(ARCH) $(DEFINES)
 
-CFLAGS	+=	$(INCLUDE) -D__SWITCH__
+CFLAGS	+=	$(INCLUDE) -D__SWITCH__ -DVERSION=\"v$(HBL_VERSION)\"
 
 CXXFLAGS	:= $(CFLAGS) -fno-rtti -fno-exceptions
 
