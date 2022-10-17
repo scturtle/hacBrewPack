@@ -48,7 +48,7 @@ SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 
-HBL_VERSION	:=	2.4.1
+HBL_VERSION	:=	2.4.3
 
 CONFIG_JSON := hbmenu.json
 
